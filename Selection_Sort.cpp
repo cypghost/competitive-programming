@@ -47,14 +47,12 @@ int select(int arr[], int i)
 
 void selectionSort(int arr[], int n)
 {
-    int smallest, i, j;
+    int i, j;
     for(i = 0; i<n; i++){
-        smallest = i;
         for(j = i+1; j<n; j++){
-            if(arr[j] < arr[smallest]){
-                smallest = j;
+            if(arr[j] < arr[i]){
+               swap(&arr[j], &arr[i]);
             }
         }
-        swap(&arr[smallest], &arr[i]);
     }
 }
